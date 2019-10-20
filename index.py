@@ -288,11 +288,12 @@ def rcvBook():
 
 @app.route("/test/<string:post_slug>", methods=['GET'])
 def testPage(post_slug):
+    ali='aliali'
     sample=Bookhqtocircle.query.filter_by(slug=post_slug).first()
     return render_template('test.html', params=params, sample=sample)
 
-
-###### Rout Seperation #######
+####ali####
+###### Rout Seperation ##########
 
 app.run(debug=True)
 #app.run(host='172.40.4.27',port=5000, debug=True)
