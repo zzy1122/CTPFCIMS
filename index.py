@@ -26,7 +26,7 @@ class Bookhqtocircle(db.Model):
     circle = db.Column(db.String(80), nullable=False)
     serialfrom = db.Column(db.String(80), nullable=False)
     serialto = db.Column(db.String(120), nullable=False)
-    #slug = db.Column(db.String(25), nullable=False)
+    #slug = db.Column(db.String(25), nullable=True)
 
 ##### Class Seperation ####
 
@@ -288,7 +288,6 @@ def rcvBook():
 
 @app.route("/test/<string:post_slug>", methods=['GET'])
 def testPage(post_slug):
-    ali='aliali'
     sample=Bookhqtocircle.query.filter_by(slug=post_slug).first()
     return render_template('test.html', params=params, sample=sample)
 
