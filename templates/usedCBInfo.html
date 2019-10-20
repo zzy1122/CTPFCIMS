@@ -1,0 +1,226 @@
+<html>
+
+<head>
+    <title>Challan System</title>
+    <link href="{{ url_for('static', filename='assets/semantic/dist/semantic.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/style.css')}}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='assets/semantic/dist/semantic.min.js')}}"></script>
+    <style>
+        .disabld {
+            pointer-events: none;
+            color: rgba(8, 0, 0, 0.62);
+            background: #a9a9a96b;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $(".ui.dropdown").dropdown();
+            $(".ui.checkbox").checkbox("attach events", ".toggle.button");
+        });
+
+    </script>
+</head>
+
+<body class="ui">
+    <!--header-->
+    <header>
+        <center>
+            <h1>Used Challan Book Information</h1>
+        </center>
+
+    </header>
+    <hr>
+    <!--Bottom-->
+
+    <div class="main">
+        <div class="formDiv">
+            <div class="ui pilled tertiary inverted segment">
+                <a class="ui red ribbon label" href="/">Back</a>
+                <hr>
+                <form class="ui form">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Bank No.</label>
+                            <input type="text" name="Bank Name" placeholder="Bank Name">
+                        </div>
+                        <div class="field">
+                            <label>Date</label>
+                            <input type="date" name="date" placeholder="Date">
+                        </div>
+
+                    </div>
+                    <!--/fields-->
+                    <div class="four fields">
+                        <div class="four wide red field">
+                            <label>Officer Belt No.</label>
+                            <input type="text" name="Belt No." placeholder="Belt No.">
+                        </div>
+                        <div class="four wide field">
+                            <label>Rank</label>
+                            <input type="text" name="Rank" placeholder="Rank">
+
+                        </div>
+                        <div class="four wide field">
+                            <label>Officer Name</label>
+                            <input type="text" name="Officer Name" placeholder="Officer Name">
+
+                        </div>
+                        <div class="four wide field">
+                            <label>Sector Name</label>
+                            <input type="text" name="Sector Name" placeholder="Sector Name">
+                        </div>
+                    </div>
+                    <!--/fields-->
+                    <hr>
+                    <!--Table-->
+                    <table class="ui selectable tertiary celled table">
+                        <thead>
+                            <tr>
+                                <th>Tckt #</th>
+                                <th>Date</th>
+                                <th>T #</th>
+                                <th>Offender Name</th>
+                                <!--<th>Rel.</th>-->
+                                <th>Guardian's Name</th>
+                                <th>Address</th>
+                                <th>Veh. Name</th>
+                                <th>Doc. Seized</th>
+                                <th>Codes</th>
+                                <th>REG #</th>
+                                <th>Veh. Type</th>
+                                <th>Fine</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Ticket #">24</td>
+                                <td data-label="Date">04/05/2019</td>
+                                <td data-label="T #">237</td>
+                                <td data-label="Offender Name">Asif</td>
+                                <!--<td data-label="Relation"><select style="width: 90px">
+        <option value="Son">Son</option>
+        <option value="Father">Father</option>
+        <option value="Brother">Brother</option>
+    </select></td>-->
+                                <td data-label="Guardian's Name">Ali</td>
+                                <td data-label="Address">Fsd</td>
+                                <td data-label="Veh. Name"><select name="vehType" class="ui dropdown">
+                                        <!--<option value="">Veh. Name</option>-->
+                                        <option value="Suzuki">Suzuki</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="Yamaha">Yamaha</option>
+                                    </select></td>
+                                <td data-label="Doc. Seized"><select name="docSeized" class="ui dropdown">
+                                        <option value="CNIC">CNIC</option>
+                                        <option value="License">License</option>
+                                        <option value="Registration">Registration</option>
+                                    </select></td>
+                                <td data-label="Codes">
+                                    <select name="codes" multiple="" class="ui search selection dropdown">
+                                        <option value="">Codes</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select></td>
+                                <td data-label="REG #">FSD-1313</td>
+                                <td class="disabld" data-label="Veh. Type">Car</td>
+                                <td data-label="Fine">100</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Ticket #">24</td>
+                                <td data-label="Date">04/05/2019</td>
+                                <td data-label="T #">237</td>
+                                <td data-label="Offender Name">Asif</td>
+                                <!--<td data-label="Relation"><select style="width: 90px">
+        <option value="Son">Son</option>
+        <option value="Father">Father</option>
+        <option value="Brother">Brother</option>
+    </select></td>-->
+                                <td data-label="Guardian's Name">Ali</td>
+                                <td data-label="Address">Fsd</td>
+                                <td data-label="Veh. Name"><select name="vehType" class="ui dropdown">
+                                        <!--<option value="">Veh. Name</option>-->
+                                        <option value="Suzuki">Suzuki</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="Yamaha">Yamaha</option>
+                                    </select></td>
+                                <td data-label="Doc. Seized"><select name="docSeized" class="ui dropdown">
+                                        <option value="CNIC">CNIC</option>
+                                        <option value="License">License</option>
+                                        <option value="Registration">Registration</option>
+                                    </select></td>
+                                <td data-label="Codes">
+                                    <select name="codes" multiple="" class="ui search selection dropdown">
+                                        <option value="">Codes</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select></td>
+                                <td data-label="REG #">FSD-1313</td>
+                                <td class="disabld" data-label="Veh. Type">Car</td>
+                                <td data-label="Fine">100</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                    <!--/Table-->
+                    <div class="inline fields">
+                        <div class="four wide field"><button class="ui black button" type="submit">Submit</button></div>
+                    </div>
+                    <!--/fields-->
+                </form>
+                <!--/form-->
+                <a class="ui blue right ribbon label">Designed by IT Branch, CTO Faisalabad.</a>
+            </div>
+        </div>
+    </div>
+    <!--/main-->
+</body>
+
+</html>
+<!--CIMS by MUHAMMAD ALI NIZAMI-->

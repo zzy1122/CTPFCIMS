@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Challan System</title>
+    <link href="{{ url_for('static', filename='assets/semantic/dist/semantic.min.css') }}" rel="stylesheet">
+    <!--Semantic UI-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/style.css')}}">
+    <!--Custom CSS-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!--JS Jquery-->
+    <script src="{{ url_for('static', filename='assets/semantic/dist/semantic.min.js')}}"></script>
+    <!--JS Semantic-->
+
+</head>
+
+<body class="ui container">
+    <!--header-->
+    <header>
+        <center>
+            <h1>{{pageTitle}}</h1>
+        </center>
+    </header>
+    <hr>
+    {% block body %} {% endblock %}
+
+</body>
+
+</html>

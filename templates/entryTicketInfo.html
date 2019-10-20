@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+<!--Bottom-->
+
+<div class="main">
+    <div class="formDiv ui container">
+        <div class="ui pilled tertiary inverted segment">
+            <a class="ui red ribbon label" href="/">Back</a>
+            <hr>
+            <form class="ui form" method="POST" action="TicketInfoSuccess">
+                <div class="three fields">
+                    <div class="four wide red field">
+                        <label>Reader Belt No.</label>
+                        <input type="text" name="officerbeltno" placeholder="Reader No.">
+                    </div>
+                    <div class="four wide field">
+                        <label>Rank</label>
+                        <select name="rank">
+                            <option value="TW">TW</option>
+                            <option value="LTW">LTW</option>
+                            <option value="TA">TA</option>
+                        </select>
+                    </div>
+                    <div class="eight wide field">
+                        <label>Name</label>
+                        <input type="text" name="officername" placeholder="Name">
+                    </div>
+                </div>
+                <!--/fields-->
+                <div class="five fields">
+                    <div class="field">
+                        <label>Date</label>
+                        <input type="date" name="date" placeholder="Date">
+                    </div>
+                    <div class="field">
+                        <label>Diary No</label>
+                        <input type="text" name="diaryno" placeholder="Diary No.">
+                    </div>
+                    <div class="field">
+                        <label>Circle</label>
+                        <input type="text" name="circle" placeholder="Circle Name">
+                    </div>
+                    <div class="field">
+                        <label>Serial From</label>
+                        <input type="number" name="serialfrom" placeholder="Serial From">
+                    </div>
+                    <div class="field">
+                        <label>Serial To</label>
+                        <input type="number" name="serialto" placeholder="Serial To">
+                    </div>
+                </div>
+                <!--/fields-->
+                <div class="inline fields">
+                    <div class="four wide field"><button class="ui black button" type="submit" name="submit" id="submit">Submit</button></div>
+                </div>
+                <!--/fields-->
+            </form>
+            <!--/form-->
+            <a class="ui blue right ribbon label">Designed by IT Branch, CTO Faisalabad.</a>
+        </div>
+    </div>
+</div>
+<!--/main-->
+{% endblock %}
+<!--CIMS by MUHAMMAD ALI NIZAMI-->

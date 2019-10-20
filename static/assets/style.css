@@ -1,0 +1,23 @@
+header {
+    height: 100px;
+    border: 2px solid;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #d4d4d55e;
+}
+
+header > center > h1 {
+    /*color: darkblue;*/
+    padding-top: 20px;
+}
+
+.main {
+    margin-top: 15px;
+}
+
+.main .heading {
+    padding: 10px;
+    background: #d4d4d55e;
+    border: 1px solid black;
+}
